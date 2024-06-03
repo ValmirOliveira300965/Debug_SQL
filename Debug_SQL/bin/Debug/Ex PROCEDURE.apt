@@ -1,0 +1,77 @@
+EXEMPLO 1:
+==========
+
+DECLARE @RC int
+DECLARE @idXmlTempNFe INT = 74
+DECLARE @idXmlTempProd INT = 73
+DECLARE @idNatOp INT = 1
+DECLARE @idFornecedor INT = 6
+DECLARE @idTransportadora INT = 1
+DECLARE @idLoja INT = 1
+DECLARE @idUsuario INT = 1
+DECLARE @idLojaMaster INT = 1
+DECLARE @ret nvarchar(4000)
+DECLARE @retId uniqueidentifier
+
+EXECUTE @RC = [dbo].[sp_evMovImpNFe] 
+   @idXmlTempNFe
+  ,@idXmlTempProd
+  ,@idNatOp
+  ,@idFornecedor
+  ,@idTransportadora
+  ,@idLoja
+  ,@idUsuario
+  ,@idLojaMaster
+  ,@ret OUTPUT
+  ,@retId OUTPUT
+
+SELECT @ret
+
+-----------------------------------------------------------------------------------------------
+EXEMPLO 2:
+==========
+
+DECLARE @executarPROC INT = 1      -- 0 = Só exclui os registros!
+
+-- Exclusão dos registros previamente incluidos 
+DECLARE @numeroNFe    INT = 3930
+DECLARE @chave        UNIQUEIDENTIFIER
+
+SELECT @chave = mov_idMov FROM tbMovDados where mov_nNf = @numeroNFe
+
+DELETE FROM tbMovFaturas WHERE fat_idMov  = @chave
+DELETE FROM tbMovDados   WHERE mov_idMov  = @chave
+DELETE FROM tbMovProd    WHERE prod_idMov = @chave
+
+-- Execução da PROCEDURE
+IF @executarPROC = 1
+BEGIN
+	DECLARE @RC int
+	DECLARE @idXmlTempNFe INT = 74
+	DECLARE @idXmlTempProd INT = 73
+	DECLARE @idNatOp INT = 1
+	DECLARE @idFornecedor INT = 6
+	DECLARE @idTransportadora INT = 1
+	DECLARE @idLoja INT = 1
+	DECLARE @idUsuario INT = 1
+	DECLARE @idLojaMaster INT = 1
+	DECLARE @ret nvarchar(4000)
+	DECLARE @retId uniqueidentifier
+
+	EXECUTE @RC = [dbo].[sp_evMovImpNFe] 
+	   @idXmlTempNFe
+	  ,@idXmlTempProd
+	  ,@idNatOp
+	  ,@idFornecedor
+	  ,@idTransportadora
+	  ,@idLoja
+	  ,@idUsuario
+	  ,@idLojaMaster
+	  ,@ret OUTPUT
+	  ,@retId OUTPUT
+
+	SELECT @ret
+END
+
+-----------------------------------------------------------------------------------------------
+

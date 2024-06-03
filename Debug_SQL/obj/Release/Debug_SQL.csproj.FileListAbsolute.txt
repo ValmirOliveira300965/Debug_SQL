@@ -1,0 +1,10 @@
+C:\Valmir\C#\Debug_SQL\Debug_SQL\bin\Release\Debug_SQL.exe.config
+C:\Valmir\C#\Debug_SQL\Debug_SQL\bin\Release\Debug_SQL.exe
+C:\Valmir\C#\Debug_SQL\Debug_SQL\bin\Release\Debug_SQL.pdb
+C:\Valmir\C#\Debug_SQL\Debug_SQL\obj\Release\Debug_SQL.csproj.AssemblyReference.cache
+C:\Valmir\C#\Debug_SQL\Debug_SQL\obj\Release\Debug_SQL.FormDebug.resources
+C:\Valmir\C#\Debug_SQL\Debug_SQL\obj\Release\Debug_SQL.Properties.Resources.resources
+C:\Valmir\C#\Debug_SQL\Debug_SQL\obj\Release\Debug_SQL.csproj.GenerateResource.cache
+C:\Valmir\C#\Debug_SQL\Debug_SQL\obj\Release\Debug_SQL.csproj.CoreCompileInputs.cache
+C:\Valmir\C#\Debug_SQL\Debug_SQL\obj\Release\Debug_SQL.exe
+C:\Valmir\C#\Debug_SQL\Debug_SQL\obj\Release\Debug_SQL.pdb

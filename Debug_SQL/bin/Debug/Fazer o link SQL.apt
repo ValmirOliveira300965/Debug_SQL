@@ -1,0 +1,18 @@
+1) Na pasta do PDV, acessar o aplicativo "Saurus_Framework.Testes"
+
+2) Informar a senha SINC e conectar ao LOCALHOST ("Carregar BD")
+
+3) Fechar a janela e clicar em "Carregar BD"
+
+4) Clicar em "Executar SQL"
+
+5) Digitar:
+   CREATE DATABASE dbsaurus_atualizacao
+
+6) Colocar a Estrutura e Web (no V4, opção "Informação do usuário" e "Sobre o sistema" - sem os pontinhos)
+
+var xSenha = "@saurus" + (+DateTime.Now.Day + DateTime.Now.Hour).ToString() + "2024";
+
+String:
+Data Source=(localdb)\mssqllocaldb;Initial Catalog=master;Integrated Security=True
+

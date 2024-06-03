@@ -1,0 +1,10 @@
+SELECT * FROM [ff_txtSPEDIcms]
+(
+    CONVERT(DATETIME,'2024-02-14 01:01:01',120),
+    CONVERT(DATETIME,'2024-02-14 23:59:59',120),
+    1,
+    0,
+    1,
+    NULL
+)
+

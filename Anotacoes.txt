@@ -1,0 +1,52 @@
+
+Notebook do Valmir:
+\\valmir\André Cursos\C#\Debug_SQL
+
+Notebook da Saurus:
+C:\Valmir\C#\Debug_SQL
+
+
+
+
+MODELO DE UMA FUNCTION:
+
+create function padrao_str(@linha_char varchar(250)) 
+returns varchar(250) 
+as 
+begin 
+    declare @retorno_char varchar(250); 
+    set @retorno_char = lower(@linha_char);  
+    set @retorno_char = REPLACE(@retorno_char,' ',''); 
+    set @retorno_char = REPLACE(@retorno_char,'.',''); 
+    set @retorno_char = REPLACE(@retorno_char,'-',''); 
+    set @retorno_char = REPLACE(@retorno_char,':',''); 
+    set @retorno_char = REPLACE(@retorno_char,',',''); 
+    set @retorno_char = REPLACE(@retorno_char,';',''); 
+    set @retorno_char = REPLACE(@retorno_char,'/',''); 
+    set @retorno_char = REPLACE(@retorno_char,'´',''); 
+    set @retorno_char = REPLACE(@retorno_char,'(',''); 
+    set @retorno_char = REPLACE(@retorno_char,')',''); 
+    set @retorno_char = REPLACE(@retorno_char,char(9),''); 
+    set @retorno_char = REPLACE(@retorno_char,'á','a'); 
+    set @retorno_char = REPLACE(@retorno_char,'à','a'); 
+    set @retorno_char = REPLACE(@retorno_char,'â','a'); 
+    set @retorno_char = REPLACE(@retorno_char,'ã','a'); 
+    set @retorno_char = REPLACE(@retorno_char,'é','e'); 
+    set @retorno_char = REPLACE(@retorno_char,'ê','e'); 
+    set @retorno_char = REPLACE(@retorno_char,'í','i'); 
+    set @retorno_char = REPLACE(@retorno_char,'ó','o'); 
+    set @retorno_char = REPLACE(@retorno_char,'ô','o'); 
+    set @retorno_char = REPLACE(@retorno_char,'õ','o'); 
+    set @retorno_char = REPLACE(@retorno_char,'ú','u'); 
+    set @retorno_char = REPLACE(@retorno_char,'ç','c'); 
+       set @retorno_char = REPLACE(@retorno_char,'h',''); 
+       set @retorno_char = REPLACE(@retorno_char,'y',''); 
+       set @retorno_char = REPLACE(@retorno_char,'x',''); 
+       set @retorno_char = REPLACE(@retorno_char,'g','j'); 
+       set @retorno_char = REPLACE(@retorno_char,'s','z'); 
+       set @retorno_char = REPLACE(@retorno_char,'v','w'); 
+       set @retorno_char = REPLACE(@retorno_char,'c','k'); 
+       set @retorno_char = REPLACE(@retorno_char,'o','u'); 
+       set @retorno_char = REPLACE(@retorno_char,'e','i'); 
+    return rtrim(ltrim(@retorno_char)); 
+end
